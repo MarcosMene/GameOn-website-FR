@@ -19,7 +19,6 @@ const submitBtn = document.querySelector(".btn-submit");
 // submitBtn.disabled = true;
 
 //form elements
-
 const firstName = document.getElementById("first");
 const lastName = document.getElementById("last");
 const email = document.getElementById("email");
@@ -64,15 +63,16 @@ function launchModal() {
   infoForm.style.display = "inline"; //show form
   thankYouModal.style.display = "none"; //hide thank you
 
-  hideMessages();
+  hideMessages(); //hide messages function
 
-  fillForm();
+  fillForm(); // fill the form function
 }
 
 // close modal window
 closeModal.addEventListener("click", () => {
   modalbg.style.display = "none";
 });
+// close modal thank you
 closebuttonModal.addEventListener("click", () => {
   modalbg.style.display = "none";
 });
@@ -80,11 +80,6 @@ closebuttonModal.addEventListener("click", () => {
 //confirm inputs
 
 function fillForm() {
-  //first radio button checked
-  if (!radioBtns[0].checked) {
-    radioBtns[0].checked = true;
-  }
-
   //first name
   firstName.addEventListener("focus", (e) => {
     submitErrorMsg.style.display = "none";
@@ -104,7 +99,6 @@ function fillForm() {
   });
 
   //last name
-
   lastName.addEventListener("focus", (e) => {
     submitErrorMsg.style.display = "none";
     locationErrorMsg.style.display = "none";
@@ -123,7 +117,6 @@ function fillForm() {
   });
 
   //email
-
   email.addEventListener("focus", (e) => {
     submitErrorMsg.style.display = "none";
     locationErrorMsg.style.display = "none";
@@ -165,6 +158,9 @@ function fillForm() {
   });
 
   //city of tournement
+
+  quantityNbr.value = 1;
+
   quantityNbr.addEventListener("focus", (e) => {
     submitErrorMsg.style.display = "none";
     locationErrorMsg.style.display = "none";
@@ -175,7 +171,16 @@ function fillForm() {
     submitBtn.removeAttribute("disabled");
   });
 
+  //first radio button checked
+  if (!radioBtns[0].checked) {
+    radioBtns[0].checked = true;
+  }
+
   //checking conditions
+  if (!conditionAccept.checked) {
+    conditionAccept.checked = true;
+  }
+
   conditionAccept.addEventListener("change", (e) => {
     if (!e.target.checked) {
       conditionErrorMsg.style.display = "block";
@@ -199,9 +204,9 @@ function fillForm() {
       submitErrorMsg.style.display = "inline";
       submitBtn.disabled = true;
     } else {
-      $event.preventDefault();
+      $event.preventDefault(); //the page will be not refresh when submit button will be clicked
 
-      hideMessages();
+      hideMessages(); //call function hideMessages
 
       //reset borders inputs
       firstName.style.border = "0px solid #fff";
@@ -209,9 +214,10 @@ function fillForm() {
       email.style.border = "0px solid #fff";
       todayDateForm.style.border = "0px solid #fff";
 
-      infoForm.reset();
-      thankYouModal.style.display = "inline";
-      infoForm.style.display = "none";
+      infoForm.reset(); //reset formulaire
+
+      thankYouModal.style.display = "inline"; //show modal thank you
+      infoForm.style.display = "none"; //hide modal form
     }
   });
 }
