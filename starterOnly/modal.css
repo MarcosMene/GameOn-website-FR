@@ -43,9 +43,7 @@ img {
 
 .main-navbar {
   float: right;
-
 }
-
 
 .topnav a {
   float: left;
@@ -93,7 +91,6 @@ img {
     height: 60px;
   }
 
-
   .topnav a {
     display: none;
   }
@@ -126,7 +123,6 @@ img {
     background-color: white
   }
 
-
   .topnav.responsive {
     position: relative;
   }
@@ -153,7 +149,6 @@ img {
 }
 
 
-
 @media screen and (max-width: 540px) {
 
   .topnav {
@@ -170,7 +165,6 @@ img {
     top: 50%;
     transform: translateY(-50%);
   }
-
 
   .topnav a {
     display: none;
@@ -192,8 +186,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -292,7 +284,6 @@ input {
   border-radius: 8px;
   font-size: 20px;
   height: 48px;
-
 }
 
 .formData[data-error]::after {
@@ -550,7 +541,6 @@ input[data-error]::after {
   position: relative;
   text-align: left;
   min-width: 300px;
-
 }
 
 .hero-content::after {
@@ -612,21 +602,15 @@ input[data-error]::after {
   align-items: center;
 }
 
-
 .thankyou__text {
   padding: 206px 0;
-
 }
 
 .thankyou__text p {
-
   align-self: flex-end;
   text-align: center;
   font-size: 2rem;
-
-
 }
-
 
 .copyrights {
   color: #fe142f;
@@ -657,7 +641,6 @@ footer {
   main {
     margin: 1px 10px 15px;
     border-radius: 0;
-
   }
 
   .hero-section {
@@ -670,7 +653,6 @@ footer {
     color: #000;
     padding: 0;
   }
-
 
   .hero-content::after {
     content: unset;
@@ -709,7 +691,6 @@ footer {
 @media screen and (max-width:540px) {
   .hero-headline {
     font-size: 3rem;
-
   }
 
   .hero-text {
