@@ -201,6 +201,7 @@ function fillForm() {
       firstName.value === "" ||
       lastName.value === "" ||
       email.value === "" ||
+      !email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ||
       todayDateForm.value === "" ||
       todayDateForm.value === todayDate ||
       !conditionAccept.checked
